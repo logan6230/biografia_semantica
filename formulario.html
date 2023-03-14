@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <form action="procesar.html" method="post">
+        <fieldset>
+            <legend>Controles del formulario</legend>
+            <label for="usuario">Usuario</label>
+            <input type="text" pattern="[A-Z][a-z]{0,10}" title="Ingresar un nombre de maximo 5 letras" id="usuario"
+                name="usuario" placeholder="Ingrese usuario">
+            <br>
+            <label for="email">Email</label>
+            <input type="email" title="Ingresar un email valido" id="email" name="email" placeholder="Ingrese e-mail"
+                required>
+
+            <br>
+            <label for="telefono">Telefono</label>
+            <input type="tel" title="Ingresar un telefono valido" id="telefono" name="telefono"
+                placeholder="Ingrese un telefono">
+                <br>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha">
+            <br>
+            <label for="joven">Joven:</label>
+            <input type="radio" name="edad" id="joven" value="0-25">
+            
+            <label for="adulto">Adulto:</label>
+            <input type="radio" id="adulto" value="26-55" name="edad">
+            <label for="terceraEdad">Tercera Edad:</label>
+            <input type="radio" id="terceraEdad" value="56-120" name="edad">
+            <br>
+            <br>
+            <label for="Ingreso">Ingreso Mensual</label>
+            <input type="range" min="0" max="100" name="Ingreso" id="ingreso" >
+            
+            <br>
+            <br>
+            <label for="terminos">Terminos:</label>
+            <input type="checkbox" name="terminos" id="terminos" value="si" required>
+
+            <br>
+            <br>
+            <label for="pais">Pais:</label>
+            <select name="pais" id="pais">
+                <option value="co">Colombia</option>
+                <option value="br" selected>Brazil</option>
+                <option value="vz">Venezuela</option>
+            </select>
+            <br>
+            <br>
+            <label for="datos">Datos:</label>
+            <textarea name="datos" id="datos" cols="30" rows="10" placeholder="Ingrese su texto aqui">
+
+            </textarea>
+            <input type="submit">
+            <button type="reset">Borrar</button>
+            <button type="submit">Enviar</button>
+            <button type="button" id="btn">Botón</button>
+            
+        </fieldset>
+    </form>
+    <script src="formularios.js"></script>
+</body>
+
+</html>
