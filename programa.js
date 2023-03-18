@@ -27,20 +27,37 @@ function construirFilas() {
         let miFuente = fuentes[k]
         for (let i = 0; i < miFuente.length; i++) {
             let dtBody = document.getElementById('dtBody');
-            let fila = document.createElement("tr")
+            let fila = dtBody.insertRow(i);
+            let celda = fila.insertCell(0)
+            let text =  document.createTextNode(miFuente.key(i))
+            celda.appendChild(text);
 
-            let celda = document.createElement("td")
-            // Crear un nodo de texto
-            let text = document.createTextNode(miFuente.key(i))
+            celda =  fila.insertCell(1);
+            text =  document.createTextNode(miFuente.getItem(miFuente.key(i)))
             celda.appendChild(text)
-            fila.appendChild(celda);
+            // Forma corta de modificar el DOM
+            // let dtBody = document.getElementById('dtBody');
+            // let clave = miFuente.key(i)
+            // let valor = miFuente.getItem(clave)
+            // dtBody.innerHTML= dtBody.innerHTML + `<tr><td>${clave}</td><td>${valor}</td></tr>`
+            
+            //Forma larga de modificar el DOM
+            // let dtBody = document.getElementById('dtBody');
+            // let fila = document.createElement("tr")
 
-            celda = document.createElement("td")
-            let valor = miFuente.getItem(miFuente.key(i))
-            text = document.createTextNode(valor)
-            celda.appendChild(text)
-            fila.appendChild(celda);
-            dtBody.appendChild(fila)
+            // let celda = document.createElement("td")
+            // // Crear un nodo de texto
+            // let text = document.createTextNode(miFuente.key(i))
+            // celda.appendChild(text)
+            // fila.appendChild(celda);
+
+            // celda = document.createElement("td")
+            // let valor = miFuente.getItem(miFuente.key(i))
+            // text = document.createTextNode(valor)
+            // celda.appendChild(text)
+            // fila.appendChild(celda);
+
+            // dtBody.appendChild(fila)
 
         }
 
