@@ -1,20 +1,54 @@
 body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
+  margin: 0px;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  background-color: #0a192f;
+  color: #8892b0;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  ;
+  font-size: var(--fz-xl);
+  line-height: 1.3;
 }
+
+h3,
+h1 {
+  color: #C9D3F2;
+}
+
 header {
+  padding: 0px 50px;
   text-align: center;
-  background-color: #333;
-  color: white;
 }
+
 nav {
-  background-color: #555;
-  color: #fff;
   display: flex;
-  padding: 20px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  counter-reset: item 0;
+  z-index: 12;
+  padding: 20px 150px;
 }
+
+.nav_logo {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  align-items: center;
+  padding-left: 15px;
+}
+
+nav_menu {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
 nav ul {
   display: flex;
   margin: 0;
@@ -23,30 +57,49 @@ nav ul {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #59D9C1;
   text-decoration: none;
   padding: 10px;
 }
+
 .container {
   display: flex;
+  padding: 0px 150px;
 }
+
 aside {
-  background-color: #ddd;
-  padding: 10px;
+  margin-top: 18.7px;
+  padding: 20px 15px;
   width: 25%;
   display: flex;
   flex-direction: column;
 }
+
+aside img {
+  border-radius: 20px;
+}
+
 main {
-  padding: 10px;
-  width: 75%;
+  text-align: justify;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100vh;
+  padding: 20px 15px;
 }
+
 footer {
-  background-color: #555;
-  color: #fff;
+
   display: flex;
-  padding: 20px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  counter-reset: item 0;
+  z-index: 12;
+  padding: 20px 150px;
 }
+
 footer ul {
   display: flex;
   margin: 0;
@@ -55,7 +108,6 @@ footer ul {
 }
 
 footer ul li a {
-  color: #fff;
   text-decoration: none;
   padding: 10px;
 }
